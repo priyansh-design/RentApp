@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RentApp</string>
+
+    <string name="otp"><font color="#a3a3a3">We will send you an</font> <font color="#000000">One Time Password</font> <font color="#a3a3a3">on this mobile number</font></string>
+    <string name="otp1"><font color="#a3a3a3">Enter OTP send to </font></string>
+    <string name="navigation_drawer_open">Open navigation</string>
+    <string name="navigation_drawer_close">Close navigation</string>
+</resources>

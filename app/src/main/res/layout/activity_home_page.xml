@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_home"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".HomePage">
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clipToPadding="false"
+        app:headerLayout="@layout/header_drawer"
+        app:menu="@menu/menu_page"
+        tools:ignore="MissingConstraints" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#ffffff"
+            android:theme="?attr/actionBarTheme"
+            android:elevation="100dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_baseline_dehaze_24"/>
+        <Button
+            android:id="@+id/filter_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/filter_btn"
+           app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"/>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:orientation="vertical"
+            >
+            <fragment
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+            <Button
+                android:id="@+id/recentre_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/recentre_icon"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="13dp"
+
+                android:layout_alignParentLeft="true" />
+
+
+
+
+
+                 />
+            <ProgressBar
+                android:id="@+id/progessBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+
+                android:visibility="invisible"/>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

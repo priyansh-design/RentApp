@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MarkerInfo">
+
+
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/imageslider"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:sliderAnimationDuration="800"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="800"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="3dp"
+        app:sliderIndicatorSelectedColor="#1534DF"
+        app:sliderIndicatorUnselectedColor="#545454"
+        app:sliderScrollTimeInSec="2"
+        app:sliderStartAutoCycle="true"/>
+    <TextView
+
+        app:layout_constraintTop_toBottomOf="@id/address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of the owner"
+        android:fontFamily="@font/gotham"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/name"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of the owner"
+        android:fontFamily="@font/gotham"
+        android:paddingLeft="20dp"
+
+        android:textSize="20dp"/>
+    <TextView
+
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address of the Place"
+        android:textColor="#000000"
+        android:padding="10dp"
+        android:textSize="20dp"/>
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/address"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="Address"
+        android:textSize="20dp"/>
+    <TextView
+
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:padding="10dp"
+        android:text="BHK"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/bhk"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:paddingLeft="20dp"
+        android:text="Bhk"
+        android:textSize="20dp"/>
+
+
+
+
+
+</LinearLayout>

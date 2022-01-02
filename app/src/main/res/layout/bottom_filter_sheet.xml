@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottom_sheet"
+
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/layoutbottomsheet1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ic_baseline_remove_24"> </ImageView>
+
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Range (in km)"
+            android:textSize="20dp"
+            android:fontFamily="@font/gotham"
+            android:textColor="#000000"
+            android:padding="10dp"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:max="10"
+            android:min="2"
+
+
+
+            />
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Apartment-type"
+            android:fontFamily="@font/gotham"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            />
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:fontFamily="@font/gotham"
+                android:layout_width="20dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Flat" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:fontFamily="@font/gotham"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Bunglow" />
+            <RadioButton
+                android:id="@+id/radio3"
+                android:fontFamily="@font/gotham"
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Commercial" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Renter-type"
+            android:textSize="20dp"
+            android:fontFamily="@font/gotham"
+            android:textColor="#000000"/>
+        <RadioGroup
+            android:id="@+id/radio_group2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/radio21"
+                android:fontFamily="@font/gotham"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Family" />
+
+            <RadioButton
+                android:id="@+id/radio22"
+                android:fontFamily="@font/gotham"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Bachelor" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/layoutbottomsheet1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:fontFamily="@font/gotham"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/reset_button_in_bottomsheet"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="apply"
+            android:fontFamily="@font/gotham"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:background="@drawable/buttonshape"/>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

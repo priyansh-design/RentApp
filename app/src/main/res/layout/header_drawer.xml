@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#2c987d"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/usernameindrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:paddingLeft="10dp"
+            android:text="Your Name"
+            android:fontFamily="@font/gotham"/>
+        <TextView
+            android:id="@+id/useremailindrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Your email"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+
+
+
+            android:fontFamily="@font/gotham"/>
+        <TextView
+            android:id="@+id/usernumberindrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Your number"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+
+
+            android:fontFamily="@font/gotham"/>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
