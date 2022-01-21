@@ -18,7 +18,8 @@
         android:layout_marginTop="30dp"
         android:textSize="50sp"
         android:textFontWeight="30"
-        android:textColor="#2c987d"></TextView>
+        android:textColor="#2c987d"
+        tools:ignore="MissingConstraints"></TextView>
     <TextView
         android:id="@+id/tellusmore"
         android:layout_width="match_parent"
@@ -44,6 +45,7 @@
             tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_edit"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:inputType="text"

@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     entered_number=countryCode+number;
                     PhoneAuthOptions options=PhoneAuthOptions.newBuilder(firebaseAuth)
                             .setPhoneNumber(entered_number)
-                            .setTimeout(60L, TimeUnit.SECONDS)
+                            .setTimeout(30L, TimeUnit.SECONDS)
                             .setActivity(MainActivity.this)
                             .setCallbacks(callbacks)
                             .build();

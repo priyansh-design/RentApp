@@ -2,6 +2,7 @@ package com.example.rentapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentResolver;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -14,8 +15,7 @@ import com.smarteist.autoimageslider.SliderViewAdapter;
 import java.util.ArrayList;
 
 public class MarkerInfo extends AppCompatActivity {
-    String name,address;
-    Long  bhk;
+    String name,address,bhk;
     TextView _n,_a,_b;
     ArrayList<Uri> images=new ArrayList<>();
     SliderView sliderView;
@@ -31,10 +31,19 @@ public class MarkerInfo extends AppCompatActivity {
         _b=findViewById(R.id.bhk);
         name=getIntent().getStringExtra("name");
         address=getIntent().getStringExtra("address");
+        bhk=getIntent().getStringExtra("bhk");
+
 
         _n.setText(name);
         _a.setText(address);
+        _b.setText(bhk);
 
+        Uri imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
+                "://" + getResources().getResourcePackageName(R.drawable.sample)
+                + '/' + getResources().getResourceTypeName(R.drawable.sample) + '/' + getResources().getResourceEntryName(R.drawable.sample) );
+        for(int i=0;i<3;i++){
+            images.add(imageUri);
+        }
 
         sliderView=findViewById(R.id.imageslider);
         SliderAdpater sliderAdpater=new SliderAdpater(images);
@@ -43,7 +52,7 @@ public class MarkerInfo extends AppCompatActivity {
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
         sliderView.startAutoCycle();
 
-//        _b.setText(String.valueOf(bhk));
+//
 
     }
 }

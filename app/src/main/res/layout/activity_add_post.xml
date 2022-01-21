@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".AddPost">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham"
+                android:gravity="center_horizontal"
+                android:text="Add photes"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/upload_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="100dp"
+                android:paddingRight="100dp"
+                android:text="Upload"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/buttonshape"
+                android:textAllCaps="false"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/upload_recycler"
+                    android:scrollbars="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    />
+            </LinearLayout>
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/Ownername_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Owners Name"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/owner_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your Name"
+                    app:errorEnabled="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/builduparea_he"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ownername_edit"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="text"
+
+
+
+                        android:fontFamily="@font/gotham"
+
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/Address_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Property Address"
+                    app:errorEnabled="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/builduparea_he"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/address_edit"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="text"
+                        android:fontFamily="@font/gotham"
+
+
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/housetype_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="House-Type"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <RadioGroup
+                android:id="@+id/house_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/radioh1"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="20dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Flat" />
+
+                <RadioButton
+                    android:id="@+id/radioh2"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Bunglow" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/tenanttype_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tenant-Type"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <RadioGroup
+                android:id="@+id/tenant_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/radiot1"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="20dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Family" />
+
+                <RadioButton
+                    android:id="@+id/radiot2"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Bachelor" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/builduparea_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buildup-Area"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Area(in sqft)"
+                    app:errorEnabled="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/builduparea_he"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/area_edit"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:fontFamily="@font/gotham"
+
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/rentamount_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rent Amount"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/rent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rent Amount(in Rs)"
+                    app:errorEnabled="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/builduparea_he"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/rent_edit"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:fontFamily="@font/gotham"
+
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bhk_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BHK:"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <RadioGroup
+                android:id="@+id/BHK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radiob1"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="20dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="1" />
+
+                <RadioButton
+                    android:id="@+id/radiob2"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="2" />
+                <RadioButton
+                    android:id="@+id/radiob3"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="3" />
+                <RadioButton
+                    android:id="@+id/radib4"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/furniture_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Furniture Status"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <RadioGroup
+                android:id="@+id/furniture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radiof1"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="20dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Full" />
+
+                <RadioButton
+                    android:id="@+id/radiof2"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Semi" />
+                <RadioButton
+                    android:id="@+id/radiof3"
+                    android:fontFamily="@font/gotham"
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="None" />
+
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/ammenities_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Facilities"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/gym"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gym"
+                    android:fontFamily="@font/gotham"/>
+                <CheckBox
+                    android:id="@+id/swimming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Swimming Pool"
+                    android:fontFamily="@font/gotham"
+                     />
+                <CheckBox
+                    android:id="@+id/playground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Playground"
+                    android:fontFamily="@font/gotham"
+                    />
+                <CheckBox
+                    android:id="@+id/parking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Parking"
+                    android:fontFamily="@font/gotham"
+                     />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/available_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Available from"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+
+                android:layout_above="@+id/textView1"
+
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="36dp"/>
+
+            <Button
+
+                android:id="@+id/submitpost_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="110dp"
+                android:paddingRight="110dp"
+                android:text="Post the Property"
+                android:textSize="15dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

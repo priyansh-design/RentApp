@@ -77,7 +77,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     String name,email,mobile_number;
     TextView name_header,email_header,mobilenumber_header;
     ProgressBar progressBar;
-    Button recentre_btn,filter;
+    Button recentre_btn,filter,add_post;
     BottomSheetDialog bottomSheetDialog;
     Map<LatLng,PostDetails_sample> markertoinfo=new HashMap<>();
     
@@ -98,6 +98,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         email_header=header_drawer.findViewById(R.id.useremailindrawer);
         mobilenumber_header=header_drawer.findViewById(R.id.usernumberindrawer);
         progressBar=findViewById(R.id.progessBar);
+        add_post=findViewById(R.id.post_btn);
         recentre_btn=findViewById(R.id.recentre_btn);
         filter=findViewById(R.id.filter_btn);
         filter.setOnClickListener(new View.OnClickListener() {
@@ -142,27 +143,14 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        add_post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomePage.this,AddPost.class);
+                intent.putExtra("user_number",mobile_number);
+                startActivity(intent);
+            }
+        });
 
 
     }
@@ -235,7 +223,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                                         Log.d("onrun",""+pla_add);
                                         Geocoder pla_geocoder=new Geocoder(HomePage.this,Locale.getDefault());
                                         try {
-                                            List<Address> pla_address=pla_geocoder.getFromLocationName(pla_add,3);
+                                            List<Address> pla_address=pla_geocoder.getFromLocationName(pla_add,2);
                                             Log.d("onrun",""+pla_address.get(0));
                                             if(pla_address.size()>0){
                                                 p_lat=pla_address.get(0).getLatitude();
@@ -246,6 +234,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                                                 Location.distanceBetween(my_lat,my_long,p_lat,p_long,results);
                                                 float distance=results[0];
                                                 if(distance/1000.00<=4){
+                                                    Log.d("onrun",""+ distance/1000.00);
                                                     int pla_height = 80;
                                                     int pla_width = 80;
                                                     BitmapDrawable bitmapdraw = (BitmapDrawable)getResources().getDrawable(R.drawable.pla_icon);
