@@ -32,15 +32,17 @@
                 android:textColor="#000000"
                 android:textSize="20dp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/upload_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center_horizontal"
-                android:paddingLeft="100dp"
-                android:paddingRight="100dp"
+
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+
                 android:text="Upload"
                 android:textSize="20dp"
                 android:textColor="#ffffff"
@@ -105,6 +107,50 @@
                         tools:ignore="MissingConstraints" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+            <TextView
+                android:id="@+id/mobilenumber_he"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Owners Number"
+                android:textSize="20dp"
+                android:fontFamily="@font/gotham"
+                android:textColor="#000000"
+                android:padding="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/mobile_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter the number"
+                    app:errorEnabled="true"
+                    app:counterMaxLength="10"
+
+                    app:layout_constraintTop_toBottomOf="@id/builduparea_he"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mobilenum_edit"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:maxLength="10"
+
+
+
+                        android:fontFamily="@font/gotham"
+
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/Address_he"
                 android:layout_width="match_parent"
@@ -252,6 +298,9 @@
                         tools:ignore="MissingConstraints" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+
+
+
             <TextView
                 android:id="@+id/rentamount_he"
                 android:layout_width="match_parent"
@@ -443,26 +492,50 @@
                 android:layout_above="@+id/textView1"
 
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="36dp"/>
-
-            <Button
-
-                android:id="@+id/submitpost_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="center_horizontal"
-                android:paddingLeft="110dp"
-                android:paddingRight="110dp"
-                android:text="Post the Property"
-                android:textSize="15dp"
-                android:background="@drawable/buttonshape"
-                android:textColor="#ffffff"
-                android:textAllCaps="false"/>
+                android:layout_marginBottom="30dp"/>
+
+<!--            <Button-->
+
+<!--                android:id="@+id/submitpost_btn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:paddingLeft="110dp"-->
+<!--                android:paddingRight="110dp"-->
+<!--                android:text="Post the Property"-->
+<!--                android:textSize="15dp"-->
+<!--                android:background="@drawable/buttonshape"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:textAllCaps="false"/>-->
 
 
         </LinearLayout>
     </ScrollView>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton android:id="@+id/submitpost_btn"
+
+        android:layout_margin="12dp"
+        android:layout_gravity="bottom|right"
+        android:textColor="#000000"
+
+
+        android:textAllCaps="false"
+        android:text="Post the Property"
+
+        app:icon="@drawable/ic_baseline_post_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="20dp"
+        android:paddingTop="20dp"
+        android:textSize="18dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardDetails">
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/edit_button"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="120dp"
+        app:icon="@drawable/ic_baseline_edit_24"
+
+        android:backgroundTint="#A0C8E8"
+        android:textColor="#ffffff"
+        app:iconTint="#19256A"
+        android:textAllCaps="false"
+        android:textSize="15dp"
+        android:padding="10dp"/>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/delete_button"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="30dp"
+       app:icon="@drawable/ic_baseline_delete_24"
+
+        android:backgroundTint="#A0C8E8"
+        android:textColor="#ffffff"
+        app:iconTint="#19256A"
+        android:textAllCaps="false"
+        android:textSize="15dp"
+        android:padding="10dp"/>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="#ffffff"
+            app:titleEnabled="true"
+            app:collapsedTitleTextAppearance="@style/ThemeOverlay.AppCompat.Dark"
+
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed|enterAlwaysCollapsed"
+            app:title="Property Details">
+            <com.smarteist.autoimageslider.SliderView
+
+                android:id="@+id/imageslider"
+
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:fitsSystemWindows="true"
+                app:sliderAnimationDuration="800"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="false"
+                app:sliderIndicatorAnimationDuration="800"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="3dp"
+                app:sliderIndicatorSelectedColor="#1534DF"
+                app:sliderIndicatorUnselectedColor="#545454"
+                app:sliderScrollTimeInSec="2"
+                app:sliderStartAutoCycle="false" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                app:titleTextColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                app:titleTextAppearance="@style/ThemeOverlay.AppCompat.Dark"
+                app:title="Property Details"
+
+
+
+
+
+
+                app:layout_collapseMode="pin">
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffffff"
+                    android:id="@+id/back_btn"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    app:iconPadding="10dp"
+
+                    android:gravity="center_horizontal"
+                    app:icon="@drawable/ic_baseline_arrow_back_ios_24"
+                    app:iconTint="#3F51B5"
+                    />
+
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <com.google.android.material.tabs.TabLayout
+
+            android:id="@+id/tablayout"
+            app:tabSelectedTextColor="#2139BF"
+            app:tabIndicatorColor="#2139BF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/overview"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Overview"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/other_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other Details"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:isScrollContainer="true"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -45,12 +45,12 @@ public class MarkerInfo extends AppCompatActivity {
             images.add(imageUri);
         }
 
-        sliderView=findViewById(R.id.imageslider);
-        SliderAdpater sliderAdpater=new SliderAdpater(images);
-        sliderView.setSliderAdapter(sliderAdpater);
-        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
-        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
-        sliderView.startAutoCycle();
+//        sliderView=findViewById(R.id.imageslider);
+//        SliderAdpater sliderAdpater=new SliderAdpater(images_f);
+//        sliderView.setSliderAdapter(sliderAdpater);
+//        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+//        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+//        sliderView.startAutoCycle();
 
 //
 

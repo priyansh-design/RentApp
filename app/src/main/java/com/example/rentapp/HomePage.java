@@ -223,7 +223,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                                         Log.d("onrun",""+pla_add);
                                         Geocoder pla_geocoder=new Geocoder(HomePage.this,Locale.getDefault());
                                         try {
-                                            List<Address> pla_address=pla_geocoder.getFromLocationName(pla_add,2);
+                                            List<Address> pla_address=pla_geocoder.getFromLocationName(pla_add,3);
                                             Log.d("onrun",""+pla_address.get(0));
                                             if(pla_address.size()>0){
                                                 p_lat=pla_address.get(0).getLatitude();
@@ -338,6 +338,12 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()){
+            case R.id.nav_posts:
+                Intent intent=new Intent(HomePage.this,UserPosts.class);
+                startActivity(intent);
+                return true;
+        }
         return true;
     }
 

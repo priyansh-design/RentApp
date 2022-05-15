@@ -13,8 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddPost"></activity>
+        <activity android:name=".CardDetails"></activity>
+        <activity android:name=".MyPost" />
+        <activity android:name=".AddPost" />
         <activity android:name=".MarkerInfo" />
+        <activity android:name=".UserPosts" />
+        <activity android:name=".ManagePost" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

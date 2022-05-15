@@ -5,4 +5,6 @@
     <string name="otp1"><font color="#a3a3a3">Enter OTP send to </font></string>
     <string name="navigation_drawer_open">Open navigation</string>
     <string name="navigation_drawer_close">Close navigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

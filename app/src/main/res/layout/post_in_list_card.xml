@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+
+
+    android:backgroundTint="#ffffff"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="13dp"
+    android:layout_marginBottom="10dp"
+    app:strokeColor="#000000"
+    android:elevation="100dp"
+    android:padding="510dp"
+
+    app:strokeWidth="2dp"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.google.android.material.card.MaterialCardView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/image_card"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:strokeColor="#000000"
+                app:strokeWidth="0.7dp"
+                style="@style/MyApp.Widget.CardView">
+                <ImageView
+                    android:id="@+id/house_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+
+                    android:background="@drawable/no_image"
+                    tools:ignore="MissingConstraints" />
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="end"
+
+
+
+                    android:layout_margin="10dp"
+                    android:background="@drawable/fav_selector"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dist_add_view"
+            app:layout_constraintTop_toBottomOf="@id/image_card"
+            tools:ignore="MissingConstraints"
+            android:gravity="center"
+
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_baseline_location_on_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/address"
+                android:textColor="#000000"
+                android:text="Palm Meadows,Near Makarba Railway crossing"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toBottomOf="@id/dist_add_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/small_card_views"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                tools:ignore="MissingConstraints">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+
+                    android:text="Rs "
+
+                    android:textColor="#000000"
+
+
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/rent_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+
+
+                    android:text="20000"
+
+                    android:textColor="#000000"
+
+
+                    tools:ignore="MissingConstraints" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+
+
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="1dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:background="#ffffff"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_baseline_king_bed_24"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:id="@+id/bhk"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:layout_margin="3dp"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    app:cardBackgroundColor="#ffffff"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    app:cardCornerRadius="15dp"-->
+<!--                    app:strokeColor="#000000"-->
+<!--                    app:strokeWidth="0.5dp">-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:background="#ffffff"-->
+<!--                        >-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:layout_marginRight="5dp"-->
+<!--                            android:layout_marginBottom="5dp"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:background="@drawable/ic_baseline_bathtub_24"/>-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="3"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_margin="3dp"-->
+<!--                            android:textSize="20dp"-->
+<!--                            android:layout_gravity="center"/>-->
+<!--                    </LinearLayout>-->
+<!--                </com.google.android.material.card.MaterialCardView>-->
+<!--                -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#ffffff"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="12dp"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="1dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp"
+                        android:background="#ffffff"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_baseline_aspect_ratio_24"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30000"
+                            android:id="@+id/square_foot"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:layout_margin="3dp"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>

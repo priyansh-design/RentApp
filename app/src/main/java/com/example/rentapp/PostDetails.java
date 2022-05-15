@@ -1,20 +1,27 @@
 package com.example.rentapp;
 
 import android.net.Uri;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.util.ArrayList;
-import java.util.Date;
 
-public class PostDetails {
-    String name,mobile_number,house_type,tenant_type,bhk,furnished_type,rent_amount,buildup_area,address,available_from;
-    ArrayList<Uri> uri_list;
+public class PostDetails implements Parcelable {
+    String mobile_number,rent_amount,postId;
+    String name,house_type,tenant_type,bhk,furnished_type,buildup_area,address,available_from;
+    ArrayList<String> uri_list;
     ArrayList<String> ammenities;
 
     public PostDetails() {
     }
 
-    public PostDetails(String name,String address,String mobile_number,String buildup_area,String available_from,String rent_amount,String bhk,String furnished_type, String house_type, String tenant_type, ArrayList<Uri> uri_list, ArrayList<String> ammenities) {
+    public PostDetails(String mobile_number,String rent_amount) {
+        this.mobile_number=mobile_number;
+        this.rent_amount=rent_amount;
+    }
+    public PostDetails(String name,String address,String mobile_number,String buildup_area,String available_from,String rent_amount,String bhk,String furnished_type, String house_type, String tenant_type, ArrayList<String> uri_list, ArrayList<String> ammenities,String postId) {
         this.name = name;
+        this.postId=postId;
         this.address=address;
         this.available_from=available_from;
         this.mobile_number = mobile_number;
@@ -26,6 +33,41 @@ public class PostDetails {
         this.buildup_area=buildup_area;
         this.uri_list = uri_list;
         this.ammenities = ammenities;
+    }
+
+
+    protected PostDetails(Parcel in) {
+        mobile_number = in.readString();
+        rent_amount = in.readString();
+        postId = in.readString();
+        name = in.readString();
+        house_type = in.readString();
+        tenant_type = in.readString();
+        bhk = in.readString();
+        furnished_type = in.readString();
+        buildup_area = in.readString();
+        address = in.readString();
+        available_from = in.readString();
+        uri_list = in.createStringArrayList();
+        ammenities = in.createStringArrayList();
+    }
+
+    public static final Creator<PostDetails> CREATOR = new Creator<PostDetails>() {
+        @Override
+        public PostDetails createFromParcel(Parcel in) {
+            return new PostDetails(in);
+        }
+
+        @Override
+        public PostDetails[] newArray(int size) {
+            return new PostDetails[size];
+        }
+    };
+
+    public String getPostId() { return postId; }
+
+    public void setPostId(String postId) {
+        this.postId=postId;
     }
 
     public String getAddress() {
@@ -43,6 +85,8 @@ public class PostDetails {
     public void setName(String name) {
         this.name = name;
     }
+
+
 
 
 
@@ -94,6 +138,7 @@ public class PostDetails {
         this.rent_amount = rent_amount;
     }
 
+
     public String getBuildup_area() {
         return buildup_area;
     }
@@ -104,11 +149,11 @@ public class PostDetails {
 
 
 
-    public ArrayList<Uri> getUri_list() {
+    public ArrayList<String> getUri_list() {
         return uri_list;
     }
 
-    public void setUri_list(ArrayList<Uri> uri_list) {
+    public void setUri_list(ArrayList<String> uri_list) {
         this.uri_list = uri_list;
     }
 
@@ -119,4 +164,29 @@ public class PostDetails {
     public void setAmmenities(ArrayList<String> ammenities) {
         this.ammenities = ammenities;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+
+        parcel.writeString(mobile_number);
+        parcel.writeString(rent_amount);
+        parcel.writeString(postId);
+        parcel.writeString(name);
+        parcel.writeString(house_type);
+        parcel.writeString(tenant_type);
+        parcel.writeString(bhk);
+        parcel.writeString(furnished_type);
+        parcel.writeString(buildup_area);
+        parcel.writeString(address);
+        parcel.writeString(available_from);
+        parcel.writeStringList(uri_list);
+        parcel.writeStringList(ammenities);
+    }
+
+
 }

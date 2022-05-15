@@ -1,9 +1,9 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#00BCD4</item>
         <item name="colorAccent">@color/colorAccent</item>
 
     </style>
@@ -14,6 +14,14 @@
     <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
     </style>
+    <style name="MyApp.Widget.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">8dp</item>
+
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="backgroundColor">#ffffff</item>
+    </style>
+
 
 
 </resources>
