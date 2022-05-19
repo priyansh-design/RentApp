@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "791644723815",
+    "firebase_url": "https://rentapp-84629-default-rtdb.firebaseio.com",
     "project_id": "rentapp-84629",
     "storage_bucket": "rentapp-84629.appspot.com"
   },
@@ -13,6 +14,22 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "791644723815-fp9loqc5i8n1tv1nlbr39irh6st6h80j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rentapp",
+            "certificate_hash": "6ce4f056d3a664bab2b862a2064b04638c1a5f8b"
+          }
+        },
+        {
+          "client_id": "791644723815-oehi54jj3dgt2t66croq6ft3nm63j8sq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rentapp",
+            "certificate_hash": "72e28af18f6556358be08e452bebe134307bdf68"
+          }
+        },
         {
           "client_id": "791644723815-goq8f7no5sb7o1cbdkn9b8qbusnolgip.apps.googleusercontent.com",
           "client_type": 3

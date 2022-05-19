@@ -13,9 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CardDetails"></activity>
+        <activity android:name=".CardDetails" />
         <activity android:name=".MyPost" />
-        <activity android:name=".AddPost" />
+        <activity android:name=".Add_Post.View.AddPost" />
         <activity android:name=".MarkerInfo" />
         <activity android:name=".UserPosts" />
         <activity android:name=".ManagePost" />

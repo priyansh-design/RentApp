@@ -7,7 +7,7 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 
 public class PostDetails implements Parcelable {
-    String mobile_number,rent_amount,postId;
+    String mobile_number,rent_amount,postId,city;
     String name,house_type,tenant_type,bhk,furnished_type,buildup_area,address,available_from;
     ArrayList<String> uri_list;
     ArrayList<String> ammenities;
@@ -19,9 +19,10 @@ public class PostDetails implements Parcelable {
         this.mobile_number=mobile_number;
         this.rent_amount=rent_amount;
     }
-    public PostDetails(String name,String address,String mobile_number,String buildup_area,String available_from,String rent_amount,String bhk,String furnished_type, String house_type, String tenant_type, ArrayList<String> uri_list, ArrayList<String> ammenities,String postId) {
+    public PostDetails(String name,String address,String mobile_number,String buildup_area,String available_from,String rent_amount,String bhk,String furnished_type, String house_type, String tenant_type, ArrayList<String> uri_list, ArrayList<String> ammenities,String postId,String city) {
         this.name = name;
         this.postId=postId;
+        this.city=city;
         this.address=address;
         this.available_from=available_from;
         this.mobile_number = mobile_number;
@@ -36,21 +37,7 @@ public class PostDetails implements Parcelable {
     }
 
 
-    protected PostDetails(Parcel in) {
-        mobile_number = in.readString();
-        rent_amount = in.readString();
-        postId = in.readString();
-        name = in.readString();
-        house_type = in.readString();
-        tenant_type = in.readString();
-        bhk = in.readString();
-        furnished_type = in.readString();
-        buildup_area = in.readString();
-        address = in.readString();
-        available_from = in.readString();
-        uri_list = in.createStringArrayList();
-        ammenities = in.createStringArrayList();
-    }
+
 
     public static final Creator<PostDetails> CREATOR = new Creator<PostDetails>() {
         @Override
@@ -87,7 +74,8 @@ public class PostDetails implements Parcelable {
     }
 
 
-
+    public void setCity(String city) { this.city=city;};
+    public String getCity() { return city; }
 
 
     public String getMobile_number() {
@@ -170,11 +158,28 @@ public class PostDetails implements Parcelable {
         return 0;
     }
 
+    protected PostDetails(Parcel in) {
+        mobile_number = in.readString();
+        rent_amount = in.readString();
+        postId = in.readString();
+        city=in.readString();
+        name = in.readString();
+        house_type = in.readString();
+        tenant_type = in.readString();
+        bhk = in.readString();
+        furnished_type = in.readString();
+        buildup_area = in.readString();
+        address = in.readString();
+        available_from = in.readString();
+        uri_list = in.createStringArrayList();
+        ammenities = in.createStringArrayList();
+    }
     @Override
     public void writeToParcel(Parcel parcel, int i) {
 
         parcel.writeString(mobile_number);
         parcel.writeString(rent_amount);
+        parcel.writeString(city);
         parcel.writeString(postId);
         parcel.writeString(name);
         parcel.writeString(house_type);

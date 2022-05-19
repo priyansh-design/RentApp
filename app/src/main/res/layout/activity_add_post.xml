@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".AddPost">
+    tools:context=".Add_Post.View.AddPost">
 
 
 
@@ -56,9 +56,7 @@
                     android:id="@+id/upload_recycler"
                     android:scrollbars="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    />
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
 
@@ -432,7 +430,7 @@
                 android:id="@+id/ammenities_he"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Facilities"
+                android:text="Facilities Available Near By"
                 android:textSize="20dp"
                 android:fontFamily="@font/gotham"
                 android:textColor="#000000"
@@ -537,5 +535,26 @@
         android:layout_width="wrap_content">
 
     </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="invisible"
+        android:id="@+id/progessBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <ProgressBar-->
+<!--        android:id="@+id/progessBar"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:visibility="visible"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

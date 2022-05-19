@@ -7,10 +7,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-
+import com.example.rentapp.Add_Post.View.AddPost;
 import android.Manifest;
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -21,22 +19,19 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.rentapp.Add_Post.View.AddPost;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -48,14 +43,13 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.google.android.material.internal.NavigationMenu;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.gson.internal.$Gson$Preconditions;
+//import com.google.gson.internal.$Gson$Preconditions;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -80,7 +74,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     Button recentre_btn,filter,add_post;
     BottomSheetDialog bottomSheetDialog;
     Map<LatLng,PostDetails_sample> markertoinfo=new HashMap<>();
-    
+
 
 
     @Override
@@ -146,8 +140,9 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         add_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomePage.this,AddPost.class);
-                intent.putExtra("user_number",mobile_number);
+                Intent intent=new Intent(HomePage.this, AddPost.class);
+                // for smooth working of add post
+                intent.putExtra("username","+917000614559");
                 startActivity(intent);
             }
         });
