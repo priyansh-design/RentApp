@@ -71,10 +71,9 @@ public class AddPostModel {
 
     private void addInPostByCity(String postId) {
         Map<String,Object> map=new HashMap<>();
-        map.put(username,postId);
-        firebaseFirestore.collection("PostByCity").add(map).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+        firebaseFirestore.collection("PostByCity").document(postDetails.getCity()).collection(username).document(postId).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
-            public void onComplete(@NonNull Task<DocumentReference> task) {
+            public void onComplete(@NonNull Task<Void> task) {
                 if(uriList.size()==0) {
                     onSuccessfulUpload();
                 }
@@ -164,19 +163,7 @@ public class AddPostModel {
             // delete documen from Users/username/ if exists
             firebaseFirestore.collection("Users").document(username).collection("Posts").document(postId).delete();
             //delete document from PostById/ if exists
-            firebaseFirestore.collection("PostByCity").whereEqualTo(username, postId)
-                    .get()
-                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                            if (task.isSuccessful()) {
-                                for (QueryDocumentSnapshot document : task.getResult()) {
-                                    firebaseFirestore.collection("PostByCity").document(document.getId()).delete();
-
-                                }
-                            }
-                        }
-                    });
+            firebaseFirestore.collection("PostByCity").document(postDetails.getCity()).collection(username).document(postId).delete();
         }
         context.onFailedUpload();
     }

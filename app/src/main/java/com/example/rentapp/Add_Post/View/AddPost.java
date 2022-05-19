@@ -51,8 +51,6 @@ public class AddPost extends AppCompatActivity {
     RadioGroup house_type,tenant_type,bhk,furniture_status;
     CheckBox gym,swimming,playground,parking;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
