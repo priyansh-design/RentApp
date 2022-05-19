@@ -28,7 +28,7 @@ public class ManagePost extends AppCompatActivity {
         String idOfPost=postDetails.getPostId();
         Toast.makeText(this,"id received in manage post "+idOfPost,Toast.LENGTH_SHORT).show();
         Toast.makeText(context,"Adapter index n id "+postDetails.getName(),Toast.LENGTH_SHORT).show();
-        PostDetails postDetailsUpdated=new PostDetails("1","jgf","jgf","jgf","jgf","RS 550000","jgf","jgf","jgf","jgf",new ArrayList<String>(),new ArrayList<String>(),"1");
+        PostDetails postDetailsUpdated=new PostDetails("1","jgf","jgf","jgf","jgf","RS 550000","jgf","jgf","jgf","jgf",new ArrayList<String>(),new ArrayList<String>(),"1","");
         mFirebaseFirestore=FirebaseFirestore.getInstance();
 //        mFirebaseFirestore.collection("Users").document(username).collection("posts").document(idOfPost).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
 //            @Override

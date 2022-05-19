@@ -18,7 +18,6 @@ import java.util.ArrayList;
 
 public class UploadImageAdapter extends RecyclerView.Adapter<UploadImageAdapter.UploadImageHolder> {
 
-
     ArrayList<Uri> post_images;
     public UploadImageAdapter(ArrayList<Uri> img){
         this.post_images=img;
@@ -59,8 +58,6 @@ public class UploadImageAdapter extends RecyclerView.Adapter<UploadImageAdapter.
             super(itemView);
             this.image=itemView.findViewById(R.id.image);
             this.delete=itemView.findViewById(R.id.delete);
-
-
         }
 
 

@@ -19,7 +19,6 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import com.hbb20.CountryCodePicker;
 
 import java.util.concurrent.TimeUnit;
-
 public class MainActivity extends AppCompatActivity {
     EditText usernumber;
     Button get_otp;

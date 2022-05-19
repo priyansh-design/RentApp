@@ -62,9 +62,6 @@ public class EnterDetails extends AppCompatActivity {
                     intent.putExtra("usernumber",mobile_number);
                     startActivity(intent);
                     finish();
-
-
-
                 }
             }
         });
